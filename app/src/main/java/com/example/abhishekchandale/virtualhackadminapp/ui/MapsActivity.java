@@ -2,6 +2,7 @@ package com.example.abhishekchandale.virtualhackadminapp.ui;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.abhishekchandale.virtualhackadminapp.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,10 +38,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
 
+        mMap = googleMap;
+        Log.e("map",""+getIntent().getDoubleExtra("lat",0.0));
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(getIntent().getDoubleExtra("lat", 0.0), getIntent().getDoubleExtra("long", 0.0));
+        LatLng sydney = new LatLng(12.8380467,77.6646841);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }

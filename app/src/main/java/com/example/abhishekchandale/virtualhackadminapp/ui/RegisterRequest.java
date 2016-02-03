@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -144,6 +145,7 @@ public class RegisterRequest extends AppCompatActivity {
                 // Toast.makeText(getApplicationContext(), q.getImage(), Toast.LENGTH_SHORT).show();
                 lat = q.getLat();
                 longitude = q.getLon();
+                Log.e("coordinate-" ,+lat+""+longitude);
                 dbAccess.addComplaint(q.getComplaintMessage(), Base64.decode(q.getImage(), 0), q.getName(), q.getEmail(), q.getDate(), q.getLat(), q.getLon(), q.getComplaintAddress());
             }
 

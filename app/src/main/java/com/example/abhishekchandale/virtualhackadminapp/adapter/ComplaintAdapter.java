@@ -33,6 +33,7 @@ public class ComplaintAdapter extends BaseAdapter {
     String[] compMessage;
     String[] compname;
     String[] compDate;
+
     Context context;
     boolean[] animationStates;
     private static LayoutInflater layoutInflater = null;

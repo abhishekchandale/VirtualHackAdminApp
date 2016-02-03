@@ -32,11 +32,12 @@ public class ResponseMail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
+                    Log.e("Email ","Button Clicked ");
                     to.setText("developer.abhishek29@gmail.com");
                      subjectEmailer= subject.getText().toString();
                      bodyEmailer= body_message.getText().toString();
                      GMailSender sender=new GMailSender("developer.abhishek29@gmail.com","0101abhi");
-                     sender.sendMail(subjectEmailer,bodyEmailer,"developer.abhishek29@gmail.com",toEmailer);
+                     sender.sendMail(subjectEmailer,bodyEmailer,"developer.abhishek29@gmail.com","developer.abhishek29@gmail.com");
 
 
                 }catch (Exception e){
